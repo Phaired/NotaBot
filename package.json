@@ -1,0 +1,28 @@
+{
+  "name": "notabot-ts",
+  "version": "1.0.0",
+  "description": "TypeScript rewrite of Not a Bot (discord.js v14, slash + prefix commands)",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "deploy-commands": "tsx src/scripts/deployCommands.ts"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
